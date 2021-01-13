@@ -68,39 +68,11 @@ if(isset($_GET['hal']))
             <td><?=$no++?></td>
             <td><?=$data['nama_departemen']?></td>
             <td>
-                <a href="?halaman=departemen&hal=edit&id=$data['id_departemen']?>" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#edit">Edit</a>
+                <a href="?halaman=departemen&hal=edit&id=$data['id_departemen']?>" class="btn btn-success">Edit</a>
                 <a href="?halaman=departemen&hal=hapus&id=$data['id_departemen']?>" class="btn btn-danger">Hapus</a>
             </td>
         </tr>
         <?php endwhile;?>
     </table>
-  </div>
-</div>
-
-<!-- punyaari -->
-<!-- Button trigger modal -->
-
-<!-- Modal -->
-<div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form method="post" action="edit_departemen.php">
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-12">
-              <label>Departemen</label>
-              <input type="text" name="nama_departemen" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-warning">Edit</button>
-        </div>
-      </form>
-    </div>
   </div>
 </div>
